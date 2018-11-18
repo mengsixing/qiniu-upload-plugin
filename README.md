@@ -23,3 +23,7 @@ plugins: [
   })
 ];
 ```
+
+## 效果截图
+
+![上传七牛云](https://raw.githubusercontent.com/yhlben/qiniu-upload-plugin/master/screenshots/qiniu-upload.png)
