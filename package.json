@@ -1,0 +1,15 @@
+{
+  "name": "qiniu-upload-plugin",
+  "version": "1.0.0",
+  "description": "上传 Webpack 打包出来的 assets 到 七牛云。",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ora": "^3.0.0",
+    "qiniu": "^7.2.1"
+  }
+}
