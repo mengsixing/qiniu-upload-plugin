@@ -1,6 +1,6 @@
 {
   "name": "qiniu-upload-plugin",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "上传 Webpack 打包出来的 assets 到 七牛云。",
   "main": "index.js",
   "scripts": {
@@ -13,7 +13,9 @@
     "qiniu": "^7.2.1"
   },
   "keywords": [
-    "qiniu"
+    "qiniu",
+    "webpack",
+    "plugin"
   ],
   "homepage": "https://github.com/yhlben/qiniu-upload-plugin#readme",
   "repository": {

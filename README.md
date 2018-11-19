@@ -1,6 +1,16 @@
 # qiniu-upload-plugin
 
+[![npm版本](https://img.shields.io/npm/v/qiniu-upload-plugin.svg)](https://www.npmjs.com/package/qiniu-upload-plugin)
+[![下载量](https://img.shields.io/npm/dm/qiniu-upload-plugin.svg)](http://npm-stat.com/charts.html?package=qiniu-upload-plugin)
+
 > 将 Webpack 打包出来的 assets 上传到七牛云。
+
+## 特点
+
+- 上传 webpack 打包后的所有静态资源到七牛云。
+- 自动忽略`.html`文件。
+
+基于官方七牛云[Node.js SDK](https://developer.qiniu.com/kodo/sdk/1289/nodejs)。
 
 ## 安装
 
@@ -27,3 +37,7 @@ plugins: [
 ## 效果截图
 
 ![上传七牛云](https://raw.githubusercontent.com/yhlben/qiniu-upload-plugin/master/screenshots/qiniu-upload.png)
+
+## 示例项目
+
+[notepad](https://github.com/yhlben/notepad)一个 typescript 编写的记事本。
