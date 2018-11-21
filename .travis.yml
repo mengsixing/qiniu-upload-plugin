@@ -3,4 +3,5 @@ node_js:
  - "10"
 script:
  - npm run test
- - npm run coveralls
+after_script:
+ - npm run coverage
