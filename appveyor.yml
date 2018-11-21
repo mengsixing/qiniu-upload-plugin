@@ -15,3 +15,4 @@ shallow_clone: true
 clone_depth: 1
 test_script:
   - npm run test
+  - npm run coveralls

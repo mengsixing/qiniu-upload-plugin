@@ -2,6 +2,9 @@
 
 [![npm版本](https://img.shields.io/npm/v/qiniu-upload-plugin.svg)](https://www.npmjs.com/package/qiniu-upload-plugin)
 [![下载量](https://img.shields.io/npm/dm/qiniu-upload-plugin.svg)](http://npm-stat.com/charts.html?package=qiniu-upload-plugin)
+[![Build Status](https://travis-ci.com/yhlben/qiniu-upload-plugin.svg?branch=master)](https://travis-ci.com/yhlben/qiniu-upload-plugin)
+![appveyor](https://ci.appveyor.com/api/projects/status/github/yhlben/qiniu-upload-plugin?branch=master&svg=true)
+[![coveralls](https://img.shields.io/coveralls/yhlben/qiniu-upload-plugin.svg)](https://coveralls.io/github/yhlben/qiniu-upload-plugin)
 
 > 将 Webpack 打包出来的 assets 上传到七牛云。
 
