@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "coveralls":"coveralls:report -DrepoToken=CPwYUFJZahL9fHR7zRFB5ZjkQ6tETfouU"
+    "coveralls":"cat coverage/lcov.info | node_modules/coveralls/bin/coveralls.js"
   },
   "author": "yhlben",
   "license": "ISC",
