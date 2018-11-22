@@ -19,6 +19,8 @@ describe('QiniuUploadPlugin', () => {
       const qiniu = require('qiniu');
       new QiniuUploadPlugin(mock);
       expect(qiniu.conf.Config).toHaveBeenCalledTimes(1);
+      expect(qiniu.form_up.FormUploader).toHaveBeenCalledTimes(1);
+      expect(qiniu.form_up.PutExtra).toHaveBeenCalledTimes(1);
     });
   });
 
