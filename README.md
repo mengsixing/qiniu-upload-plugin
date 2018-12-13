@@ -12,6 +12,7 @@
 
 - 上传 webpack 打包后的所有静态资源到七牛云。
 - 自动忽略`.html`文件。
+- 支持覆盖已上传文件。
 
 基于官方七牛云[Node.js SDK](https://developer.qiniu.com/kodo/sdk/1289/nodejs)。
 
@@ -28,11 +29,13 @@ const QiniuUploadPlugin = require('./QiniuUploadPlugin');
 
 plugins: [
   new MyQiniuUploadPlugin({
-    publishPath: 'http://cdn.xxx.com', // 七牛云域名，自动替换publicPath
+    publishPath: 'http://cdn.xxx.com', // 七牛云域名，自动替换 publicPath
     accessKey: 'your qiniu accessKey', // 个人中心，秘钥管理，AK
     secretKey: 'your qiniu secretKey', // 个人中心，秘钥管理，SK
     bucket: 'your qiniu bucket', // 存储空间名称
-    zone: 'Zone_z2' // 存储地区
+    zone: 'Zone_z2', // 存储地区
+    // 可选参数：
+    cover: false // 慎用！默认为 false，设置为 true 会覆盖掉已经保存在七牛云上的同名文件。
   })
 ];
 ```
