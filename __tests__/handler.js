@@ -80,7 +80,9 @@ describe('handler', () => {
       };
       plugin.apply(compiler);
       handler(tapAsyncDataMock, done);
-      expect(plugin.formUploader.putFile).toHaveBeenCalledTimes(2);
+      expect(
+        plugin.qiniuAuthenticationConfig.formUploader.putFile
+      ).toHaveBeenCalledTimes(2);
     });
 
     it('模拟上传成功', done => {
@@ -112,7 +114,50 @@ describe('handler', () => {
       };
       plugin.apply(compiler);
       handler(tapAsyncDataMock, done);
-      expect(plugin.formUploader.putFile).toHaveBeenCalledTimes(2);
+      expect(
+        plugin.qiniuAuthenticationConfig.formUploader.putFile
+      ).toHaveBeenCalledTimes(2);
+    });
+
+    it('模拟覆盖上传', done => {
+      var qiniu = require('qiniu');
+      qiniu.form_up.FormUploader = function() {
+        var uploadTimes = 0;
+        return {
+          putFile: jest.fn((uploadToken, key, localFile, putExtra, cb) => {
+            var code = 614;
+            uploadTimes++;
+            if (uploadTimes >= 1) {
+              code = 200;
+            }
+            process.nextTick(
+              cb(null, null, {
+                statusCode: code
+              })
+            );
+          })
+        };
+      };
+      mock.cover = true;
+      const plugin = new QiniuUploadPlugin(mock);
+      let handler = null;
+      const compiler = {
+        hooks: {
+          compilation: {
+            tap: (event, cb) => {}
+          },
+          done: {
+            tapAsync: (event, cb) => {
+              handler = cb;
+            }
+          }
+        }
+      };
+      plugin.apply(compiler);
+      handler(tapAsyncDataMock, done);
+      expect(
+        plugin.qiniuAuthenticationConfig.formUploader.putFile
+      ).toHaveBeenCalledTimes(2);// 第一次，上传返回614，第二次重传
     });
   });
 });
