@@ -1,1 +1,1 @@
-module.exports=require('./lib/qiniuUploadPlugin.js')
+module.exports = require('./lib/qiniuUploadPlugin.js');

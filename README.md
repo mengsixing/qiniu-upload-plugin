@@ -7,7 +7,7 @@
 [![Coverage Status](https://coveralls.io/repos/github/yhlben/qiniu-upload-plugin/badge.svg)](https://coveralls.io/github/yhlben/qiniu-upload-plugin) [![Greenkeeper badge](https://badges.greenkeeper.io/yhlben/qiniu-upload-plugin.svg)](https://greenkeeper.io/)
 [![David](https://img.shields.io/david/yhlben/qiniu-upload-plugin.svg)](https://david-dm.org/yhlben/qiniu-upload-plugin)
 
-> 将 Webpack 打包出来的 assets 上传到七牛云。
+> 将 webpack 打包出来的 assets 上传到七牛云。
 
 ## 特点
 
@@ -47,4 +47,5 @@ plugins: [
 
 ## 示例项目
 
-[Notepad](https://github.com/yhlben/notepad)一个 TypeScript 编写的记事本。
+- 成都房协网数据分析。[cdfang-spider](https://github.com/yhlben/cdfang-spider)
+- 一个 typeScript 编写的记事本。[notepad](https://github.com/yhlben/notepad)
