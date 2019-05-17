@@ -29,8 +29,8 @@ npm install qiniu-upload-plugin --save-dev
 const QiniuUploadPlugin = require('./QiniuUploadPlugin');
 
 plugins: [
-  new MyQiniuUploadPlugin({
-    publishPath: 'http://cdn.xxx.com', // 七牛云域名，自动替换 publicPath
+  new QiniuUploadPlugin({
+    publicPath: 'http://cdn.xxx.com', // 七牛云域名，自动替换 publicPath
     accessKey: 'your qiniu accessKey', // 个人中心，秘钥管理，AK
     secretKey: 'your qiniu secretKey', // 个人中心，秘钥管理，SK
     bucket: 'your qiniu bucket', // 存储空间名称
