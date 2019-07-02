@@ -1,6 +1,6 @@
 {
   "name": "qiniu-upload-plugin",
-  "version": "1.2.8",
+  "version": "1.2.9",
   "description": "上传 Webpack 打包出来的 assets 到 七牛云。",
   "main": "index.js",
   "scripts": {
@@ -10,8 +10,12 @@
   "author": "yhlben",
   "license": "MIT",
   "dependencies": {
-    "ora": "^3.0.0",
-    "qiniu": "^7.2.1"
+    "ora": "^3.4.0",
+    "qiniu": "^7.2.2"
+  },
+  "devDependencies": {
+    "coveralls": "^3.0.4",
+    "jest": "^24.8.0"
   },
   "keywords": [
     "qiniu",
@@ -31,9 +35,5 @@
   },
   "bugs": {
     "url": "https://github.com/yhlben/qiniu-upload-plugin/issues"
-  },
-  "devDependencies": {
-    "coveralls": "^3.0.2",
-    "jest": "^23.6.0"
   }
 }
